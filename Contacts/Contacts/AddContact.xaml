@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.AddContact">
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Name">
+
+                    <EntryCell x:Name="fname" Label="FirstName:  " Placeholder="FName" Text="{Binding FirstName}"></EntryCell>
+                    <EntryCell  x:Name="lname"  Label="LastName:  " Placeholder="LName" Text="{Binding LastName}"></EntryCell>
+                </TableSection>
+                <TableSection Title="Contact Details">
+
+                    <EntryCell  Label="Phone:  " Placeholder="Phone" Text="{Binding Phone}" Keyboard="Numeric"></EntryCell>
+                    <EntryCell    Label="Email:  " Placeholder="Email" Text="{Binding Email}" Keyboard="Email"></EntryCell>
+                </TableSection>
+                <TableSection Title="Other Details">
+
+                    <SwitchCell Text="Blocked" On="{Binding IsBlocked}"></SwitchCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <Button x:Name="bt1" HorizontalOptions="Center" VerticalOptions="Center" Text="sam" Clicked="Button_Clicked" ></Button>
+                        
+                    </ViewCell>
+                    <ViewCell>
+                        <Button  HorizontalOptions="Center" VerticalOptions="Center" Text="Back" Clicked="Button_Clicked_1" ></Button>
+
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                   
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
